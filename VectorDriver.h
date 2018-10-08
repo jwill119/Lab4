@@ -1,4 +1,4 @@
-/* File: VectorDriver.cpp
+/* File: VectorDriver.h
  * Athr: Dimitri Zarzhitsky
  * Date: October 16, 2002
  *
@@ -9,10 +9,16 @@
  * Date: October 1, 2017 (the future)
  *
  */
+
+// Edited by Jacob Williams
+// for COSC 2030 
+
 typedef unsigned long ulong;
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>           // for random number
+#include <algorithm>        // for sorting
 
 using std::cout;
 using std::endl;
@@ -51,7 +57,28 @@ short compute_sum(const vector<short> &data) {
   return sum;
 }
 
-// TODO: implement add_numbers
-// TODO: implement print_even
+void add_numbers(vector<short> &data) {
+    // Adds ten random numbers to the vector.
+    for (int i = 0; i < 10; i++) {
+        data.push_back(rand());
+    }
+    return;
+}
+
+
+void print_even(const vector<short> &data) {
+    if (data.empty()) {
+        cout << "<empty>";
+    } else {
+        cout << "<" << data.at(0);
+        if (data.size() >= 2) {
+            for (ulong i = 2; i < data.size(); i += 2) {
+                cout << ", " << data.at(i);
+            }
+        }
+    cout << ">";
+    }
+}
+
 // TODO: implement is_present
 // TODO: implement std::sort function
