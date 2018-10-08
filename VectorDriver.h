@@ -23,6 +23,7 @@ typedef unsigned long ulong;
 using std::cout;
 using std::endl;
 using std::vector;
+using std::sort;
 
 // fill vector that has pre-allocated space with consecutive numbers
 void fill_vector(vector<short> &data) {
@@ -94,4 +95,17 @@ bool is_present(const vector<short> &data, short value) {
   return false;
 }
 
-// TODO: implement std::sort function
+// Return TRUE if the vector is sorted (ascending order), FALSE otherwise
+bool is_sorted(const vector<short> &data) {
+  std::vector<short>::const_iterator first = data.begin();   // The iterator
+  std::vector<short>::const_iterator second = (data.begin())++;
+  while (second != data.end()) {
+      if (*first > *second) {
+          return false;
+      } else {
+          first = second;
+          second++;
+      }
+  }
+  return true;
+}

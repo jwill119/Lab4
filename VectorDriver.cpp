@@ -45,6 +45,27 @@ int main() {
   cout << endl << endl;
 
 
+  cout << "-------------------------------------------" << endl;
+  cout << "Question 4: sort the vector" << endl;
+  cout << "-------------------------------------------" << endl;
+  cout << "We'll create a random vector again." << endl;
+  vector<short> thirdVec;
+  add_numbers(thirdVec); // Random, hence usually not sorted
+  cout << "Our vector: ";
+  print(thirdVec);
+  cout << endl;
+  cout << "We can sort this using the sort() routine in the STL!" << endl;
+  cout << "(We use the default behavior, which is ascending sort.)" << endl;
+  sort(thirdVec.begin(), thirdVec.end());
+  cout << "The sorted vector: ";
+  print(thirdVec);
+  cout << endl;
+  cout << "We have a function to test if it's sorted." << endl;
+  cout << "Is thirdVec sorted? " << is_sorted(thirdVec) << endl << endl;
+
+  
+
+
   cout << "new vector: ";
   print(sample_vector);
   cout << endl;
