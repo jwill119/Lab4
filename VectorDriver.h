@@ -12,6 +12,7 @@
 
 // Edited by Jacob Williams
 // for COSC 2030 
+// on October 8, 2018
 
 typedef unsigned long ulong;
 

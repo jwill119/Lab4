@@ -1,5 +1,6 @@
 // Modified by Jacob Williams
 // for COSC 2030 lab 4
+// on October 8, 2018
 
 #include "VectorDriver.h"
 
