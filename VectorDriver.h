@@ -57,8 +57,8 @@ short compute_sum(const vector<short> &data) {
   return sum;
 }
 
+// Add ten random numbers to the vector.
 void add_numbers(vector<short> &data) {
-    // Adds ten random numbers to the vector.
     for (int i = 0; i < 10; i++) {
         data.push_back(rand());
     }
@@ -66,6 +66,7 @@ void add_numbers(vector<short> &data) {
 }
 
 
+// Print the even-numbered entries (starting with the zeroth).
 void print_even(const vector<short> &data) {
     if (data.empty()) {
         cout << "<empty>";
@@ -80,5 +81,17 @@ void print_even(const vector<short> &data) {
     }
 }
 
-// TODO: implement is_present
+// Return TRUE if given value is in the vector, FALSE otherwise
+bool is_present(const vector<short> &data, short value) {
+  std::vector<short>::const_iterator iter = data.begin();   // The iterator
+  while (iter != data.end()) {
+      if (*iter == value) {
+          return true;
+      } else {
+          iter++;
+      }
+    }
+  return false;
+}
+
 // TODO: implement std::sort function

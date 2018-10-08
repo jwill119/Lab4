@@ -8,7 +8,7 @@ int main() {
   vector<short> sample_vector(5);
 
   cout << "-------------------------------------------" << endl;
-  cout << "Question 1: fill_vector()" << endl << endl;
+  cout << "Question 1: fill_vector()" << endl;
   cout << "-------------------------------------------" << endl;
   cout << "First we create an empty vector" << endl;
   vector<short> firstVec;
@@ -23,11 +23,27 @@ int main() {
   cout << endl << endl;
 
   cout << "-------------------------------------------" << endl;
-  cout << "Question 2: print_even()" << endl << endl;
+  cout << "Question 2: print_even()" << endl;
   cout << "-------------------------------------------" << endl;
   cout << "We'll print out only the even entries of firstVec (including the zeroth entry)." << endl;
   print_even(firstVec);
   cout << endl << endl; 
+
+  cout << "-------------------------------------------" << endl;
+  cout << "Question 3: is_present()" << endl;
+  cout << "-------------------------------------------" << endl;
+  cout << "Let's create a vector with known values 0, 2, 4, 6, 8, 10." << endl;
+  vector<short> secondVec;
+  for (short i = 0; i <= 10; i += 2) {
+      secondVec.push_back(i);
+  }
+  cout << "secondVec = ";
+  print(secondVec);
+  cout << endl;
+  cout << "Searching for 6. Is 6 present?  " << is_present(secondVec,6) << endl;
+  cout << "Searching for 1. Is 1 present?  " << is_present(secondVec,1) << endl;
+  cout << endl << endl;
+
 
   cout << "new vector: ";
   print(sample_vector);
